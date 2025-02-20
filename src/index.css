@@ -1,13 +1,128 @@
+/* Основные стили */
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    background-color: #f3f4f6;
+    font-family: Arial, sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+    max-width: 28rem;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+/* Лого */
+.logo {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background-color: black;
+    padding: 0.25rem 0.5rem;
+    font-weight: bold;
+    color: white;
+}
+
+.logo span {
+    color: #dc2626;
+}
+
+/* Основной контент */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+
+/* Иконки спорта */
+.sports-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 16rem;
+    margin-bottom: 2rem;
+}
+
+.sports-icons img {
+    width: 3rem;
+    height: 3rem;
+    object-fit: contain;
+    animation: float-animation 2s infinite ease-in-out;
+}
+
+/* Анимация иконок */
+@keyframes float-animation {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+}
+
+.float-animation-delay-1 {
+    animation-delay: 0.2s;
+}
+
+.float-animation-delay-2 {
+    animation-delay: 0.4s;
+}
+
+/* Гуру */
+.guru-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.guru-image {
+    width: 12rem;
+    height: 12rem;
+    margin-bottom: 1.5rem;
+}
+
+.guru-button {
+    background-color: #4b5563;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 9999px;
+    font-size: 1.125rem;
+}
+
+/* Нижняя навигация */
+.bottom-navigation {
+    width: 100%;
+    max-width: 24rem;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-item {
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.close-icon {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    padding: 0.25rem 0.5rem;
+    color: black;
+    width: 5rem;
+    height: 5rem;
 }
